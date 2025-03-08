@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 200;
+}
+
+.logo {
+    font-size: 44px;
+    font-weight: 900;
+    color: #ffcc00;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #00ccff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #00ccff;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+.page {
+    min-height: 100vh;
+    padding: 100px 20px;
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+p {
+    color: #ffcc00;
+    font-size: 20px;
+    margin-top: 47px;
+    transition: color 0.3s ease;
+    word-spacing: 0cqmax;
+}
+
+p:hover {
+    color: #00ccff;
+    font-size: 24px;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.main-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    font-size: 30px;
+}
+
+.word {
+    display: inline-flex;
+    align-items: center;
+}
+
+.abhi1 {
+    font-size: 45px;
+    background: linear-gradient(90deg, #ffffff, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulseText 1s ease-in-out infinite;
+}
+
+.abhi1:hover {
+    font-size: 55px;
+    background: linear-gradient(90deg, #00ffff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.o {
+    font-size: 65px;
+    margin-right: 5px;
+    background: linear-gradient(90deg, #ffffff, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulseText 1s ease-in-out infinite;
+}
+
+.o:hover {
+    font-size: 75px;
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes pulseText {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.hero {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.camera-grid {
+    display: flex;
+    justify-content: center;
+    gap: 47px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.camera-item {
+    background: rgba(30, 97, 104, 0.56);
+    padding: 61px;
+    border-radius: 52px;
+    text-align: center;
+    width: 392px;
+    height: 69vh;
+    transition: transform 0.3s ease;
+}
+
+.camera-item img {
+    width: 40%;
+    height: 30%;
+    border-radius: 154px;
+    margin-top: -40px;
+    transition: all 0.3s ease;
+}
+
+.camera-item img:hover {
+    width: 55%;
+    height: 41%;
+}
+
+.camera-item a {
+    text-decoration: none;
+}
+
+.camera-item h3 {
+    font-size: 25px;
+    color: #ffcc00;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.camera-item h3:hover {
+    font-size: 35px;
+    color: #00ffff;
+}
+
+.buy-btn {
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 22px 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 36px;
+    font-size: 21px;
+    transition: background 0.3s ease;
+}
+
+.buy-btn:hover {
+    background: #00ccff;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.about-text, .contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.key-points {
+    list-style: none;
+    margin-top: 40px;
+}
+
+.key-points li {
+    font-size: 23px;
+    color: #ffcc00;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.key-points li:hover {
+    color: #00ccff;
+    font-size: 30px;
+}
+
+.contact-form {
+    background: rgba(30, 97, 104, 0.56);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.contact-form h3 {
+    font-size: 25px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+.contact-form input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #00ccff;
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.map-container h3 {
+    font-size: 25px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 200;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+    .camera-item {
+        width: 45%;
+        height: auto;
+        padding: 40px;
+    }
+    .main-heading {
+        font-size: 26px;
+        gap: 12px;
+    }
+    .abhi1 { font-size: 40px; }
+    .o { font-size: 55px; }
+    .about-content { max-width: 90%; }
+    .map-container iframe { height: 400px; }
+}
+
+@media (max-width: 992px) {
+    .logo { font-size: 38px; }
+    .nav-link { font-size: 20px; }
+    .camera-item { width: 48%; padding: 30px; }
+    .camera-item img { width: 50%; height: auto; }
+    .main-heading { font-size: 24px; }
+    .abhi1 { font-size: 35px; }
+    .o { font-size: 50px; }
+    .buy-btn { padding: 18px 30px; font-size: 18px; }
+    .about-text, .contact-form { min-width: 100%; }
+}
+
+@media (max-width: 768px) {
+    header { padding: 15px; }
+    .logo { font-size: 32px; }
+    .nav-link { font-size: 18px; }
+    .page { padding: 80px 15px; }
+    .main-heading { font-size: 22px; gap: 10px; }
+    .abhi1 { font-size: 30px; }
+    .o { font-size: 45px; }
+    .hero p { font-size: 16px; }
+    .camera-item { 
+        width: 100%; 
+        max-width: 350px; 
+        height: auto; 
+        padding: 25px; 
+    }
+    .camera-item img { width: 60%; height: auto; }
+    .buy-btn { padding: 15px 25px; font-size: 16px; }
+    .about-content { padding: 15px; }
+    .map-container iframe { height: 350px; }
+    .key-points li { font-size: 20px; }
+    .key-points li:hover { font-size: 25px; }
+}
+
+@media (max-width: 576px) {
+    header { 
+        flex-direction: column; 
+        gap: 15px; 
+        padding: 10px; 
+    }
+    nav ul { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 10px; 
+    }
+    .logo { font-size: 28px; }
+    .nav-link { font-size: 16px; }
+    .page { padding: 60px 10px; }
+    .main-heading { font-size: 20px; gap: 8px; }
+    .abhi1 { font-size: 25px; }
+    .o { font-size: 40px; }
+    .hero { margin-top: 60px; }
+    .hero p { font-size: 14px; }
+    .camera-item { padding: 20px; }
+    .camera-item img { width: 70%; }
+    .camera-item h3 { font-size: 22px; }
+    .camera-item h3:hover { font-size: 28px; }
+    .buy-btn { padding: 12px 20px; font-size: 14px; }
+    .contact-form { padding: 20px; }
+    .contact-form h3 { font-size: 20px; }
+    .contact-form input { padding: 12px; font-size: 14px; }
+    .map-container iframe { height: 300px; }
+    footer { padding: 15px; }
+}
+
+@media (max-width: 360px) {
+    .logo { font-size: 24px; }
+    .nav-link { font-size: 14px; }
+    .main-heading { font-size: 18px; gap: 6px; }
+    .abhi1 { font-size: 22px; }
+    .o { font-size: 35px; }
+    .hero p { font-size: 12px; }
+    .camera-item { padding: 15px; }
+    .camera-item img { width: 80%; }
+    .buy-btn { padding: 10px 15px; font-size: 12px; }
+    .key-points li { font-size: 18px; }
+    .key-points li:hover { font-size: 22px; }
+    .map-container iframe { height: 250px; }
+}
